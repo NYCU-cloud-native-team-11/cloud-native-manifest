@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-native-backend
+spec:
+  replicas: {{ .Values.app.backend.replicaCount }}
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: {{ .Values.app.backend.image.repo }}:{{ .Values.app.backend.image.tag }}
+          ports:
+          - containerPort: 8080
+          envFrom:
+          - secretRef:
+              name: db-secret
+        

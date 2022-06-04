@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-native-backend
+spec:
+  selector:
+    app: cloud-native-backend
+  type: {{ .Values.app.backend.service.type }}
+  ports:
+  - protocol: TCP
+    port: {{ .Values.app.backend.service.port }}
+    targetPort: 8080

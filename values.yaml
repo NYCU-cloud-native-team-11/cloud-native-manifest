@@ -1,0 +1,9 @@
+app:
+  backend:
+    replicaCount: 1
+    image:
+      repo: <image name>
+      tag: <image tag>
+    service:
+      type: NodePort
+      port: 80
