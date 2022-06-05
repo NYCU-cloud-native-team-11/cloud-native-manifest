@@ -2,8 +2,8 @@ app:
   backend:
     replicaCount: 1
     image:
-      repo: justin89721/cloud-native-backend
-      tag: 30b7645a56edecc2d51ed291550be100c7cd5ee5
+      repo: kn71026/cloud-native-backend-prod
+      tag: df7133ac4c2fe9b9cef6326700c0ac3900e6116a
     service:
       type: NodePort
       port: 80
