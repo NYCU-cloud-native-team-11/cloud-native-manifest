@@ -16,5 +16,7 @@ app:
       type: NodePort
       port: 80
   ingress:
-    frontendhost: prod.ui.uccuz.online
-    backendhost: prod.api.uccuz.online
+    frontend:
+      host: prod.ui.uccuz.online
+    backend:
+      host: prod.api.uccuz.online

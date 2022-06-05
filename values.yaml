@@ -16,5 +16,7 @@ app:
       type: NodePort
       port: 80
   ingress:
-    frontendhost: <frontend url>
-    backendhost: <backend url>
+    frontend:
+      host: <frontend url>
+    backend:
+      host: <backend url>
