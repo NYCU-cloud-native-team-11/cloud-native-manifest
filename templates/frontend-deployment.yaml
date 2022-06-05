@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-native-frontend
+spec:
+  replicas: {{ .Values.app.frontend.replicaCount }}
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: {{ .Values.app.frontend.image.repo }}:{{ .Values.app.frontend.image.tag }}
+          ports:
+          - containerPort: 3000
+          env:
+          - name: REACT_APP_BASE_URL
+            value: http://{{ .Values.app.ingress.backend.host }}
+        
