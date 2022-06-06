@@ -17,8 +17,8 @@ app:
       port: 80
   crawler:
     image:
-      repo: <image name>
-      tag: <image tag>
+      repo: royshih/cloud-native-crawler
+      tag: 6a9b14d8efbe8c2d891687e4c5ddfacaad9ef991
   ingress:
     frontend:
       host: prod.ui.uccuz.online
