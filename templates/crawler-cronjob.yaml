@@ -17,5 +17,5 @@ spec:
             - name: HOST
               value: {{ .Values.app.ingress.backend.host }}
             - name: API
-              value: /
+              value: ""
           restartPolicy: OnFailure
