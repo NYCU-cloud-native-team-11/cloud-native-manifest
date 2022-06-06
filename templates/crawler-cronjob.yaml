@@ -15,7 +15,7 @@ spec:
             - name: PROTOCOL
               value: http
             - name: HOST
-              value: cloud-native-backend
+              value: {{ .Values.app.ingress.backend.host }}
             - name: API
               value: /
           restartPolicy: OnFailure
