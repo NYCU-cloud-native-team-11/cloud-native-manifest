@@ -18,7 +18,7 @@ app:
   crawler:
     image:
       repo: royshih/cloud-native-crawler
-      tag: 5b7b6cc9007a623c9f5bdabd5e2e1141fc90f536
+      tag: 401525f175e64170ee675ef510de22b14366099a
   ingress:
     frontend:
       host: prod.ui.uccuz.online
