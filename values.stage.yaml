@@ -3,7 +3,7 @@ app:
     replicaCount: 1
     image:
       repo: kn71026/cloud-native-backend-prod
-      tag: df7133ac4c2fe9b9cef6326700c0ac3900e6116a
+      tag: e2278f5fdbf90e80e8fce85dc49ef6cc56ff7809
     service:
       type: NodePort
       port: 80
