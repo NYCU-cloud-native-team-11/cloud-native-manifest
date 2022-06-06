@@ -15,6 +15,10 @@ app:
     service:
       type: NodePort
       port: 80
+  crawler:
+    image:
+      repo: <image name>
+      tag: <image tag>
   ingress:
     frontend:
       host: <frontend url>
