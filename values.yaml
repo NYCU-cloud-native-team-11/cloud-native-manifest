@@ -7,3 +7,20 @@ app:
     service:
       type: NodePort
       port: 80
+  frontend:
+    replicaCount: 1
+    image:
+      repo: <image name>
+      tag: <image tag>
+    service:
+      type: NodePort
+      port: 80
+  crawler:
+    image:
+      repo: <image name>
+      tag: <image tag>
+  ingress:
+    frontend:
+      host: <frontend url>
+    backend:
+      host: <backend url>

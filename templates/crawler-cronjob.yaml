@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: crawler
+spec:
+  schedule: "31 */1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: crawler
+            image: {{ .Values.app.crawler.image.repo }}:{{ .Values.app.crawler.image.tag }}
+            env:
+            - name: PROTOCOL
+              value: http
+            - name: HOST
+              value: {{ .Values.app.ingress.backend.host }}
+            - name: API
+              value: /post_many
+          restartPolicy: OnFailure

@@ -4,7 +4,7 @@ metadata:
   name: cloud-native-backend
 spec:
   selector:
-    app: cloud-native-backend
+    app: backend
   type: {{ .Values.app.backend.service.type }}
   ports:
   - protocol: TCP
