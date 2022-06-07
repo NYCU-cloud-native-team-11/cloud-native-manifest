@@ -11,7 +11,7 @@ app:
     replicaCount: 1
     image:
       repo: hsinlun/cloud-native-frontend-prod
-      tag: 28f03d053d4e384f59f8a5bc870a7e65048218ed
+      tag: 9413a798fb9567a1d7ef28adb6fcc978643d4719
     service:
       type: NodePort
       port: 80
