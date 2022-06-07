@@ -5,7 +5,7 @@
 - Helm v3
 - K8s cluster
 
-## How to started
+## Install
 
 1. Change image name, image tag and url in values.yaml
 
